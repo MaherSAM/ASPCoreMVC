@@ -102,7 +102,7 @@ namespace DutchTreat.Controllers
                     var currentUser = await _userManager.FindByNameAsync(User.Identity.Name);
 
                     newOrder.User = currentUser;
-
+                    //Il faut ajouter un repository pour faire le save des orders
                     _repository.AddEntity(newOrder);
 
                     if (_repository.SaveAll())
