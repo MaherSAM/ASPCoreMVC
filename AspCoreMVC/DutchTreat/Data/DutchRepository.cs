@@ -70,5 +70,9 @@ namespace DutchTreat.Data
         {
             _ctx.Add(model);
         }
+        public void AddOrder(Order order)
+        {
+            _ctx.Orders.Add(order);
+        }
     }
 }
