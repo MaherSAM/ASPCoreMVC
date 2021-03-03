@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\maher\OneDrive\Desktop\Maher SAMMARI\Formations\AspCoreMVC\DutchTreat\ClientApp\main.ts */"QqbR");
+module.exports = __webpack_require__(/*! C:\Users\maher\source\repos\ASPCoreMVC\AspCoreMVC\DutchTreat\ClientApp\main.ts */"QqbR");
 
 
 /***/ }),

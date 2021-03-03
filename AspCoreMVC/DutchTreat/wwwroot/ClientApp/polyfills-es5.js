@@ -499,7 +499,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       __webpack_require__(
-      /*! C:\Users\maher\OneDrive\Desktop\Maher SAMMARI\Formations\AspCoreMVC\DutchTreat\node_modules\@angular-devkit\build-angular\src\webpack\es5-polyfills.js */
+      /*! C:\Users\maher\source\repos\ASPCoreMVC\AspCoreMVC\DutchTreat\node_modules\@angular-devkit\build-angular\src\webpack\es5-polyfills.js */
       "voQr");
 
       __webpack_require__(
@@ -507,7 +507,7 @@
       "R0gw");
 
       module.exports = __webpack_require__(
-      /*! C:\Users\maher\OneDrive\Desktop\Maher SAMMARI\Formations\AspCoreMVC\DutchTreat\ClientApp\polyfills.ts */
+      /*! C:\Users\maher\source\repos\ASPCoreMVC\AspCoreMVC\DutchTreat\ClientApp\polyfills.ts */
       "4d7J");
       /***/
     },
