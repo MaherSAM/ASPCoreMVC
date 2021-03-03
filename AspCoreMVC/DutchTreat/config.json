@@ -1,0 +1,16 @@
+{
+  "ConnectionStrings": {
+    "DutchConnexionString": "Server=localhost\\SQLEXPRESS;Database=DutchTreatDb;Trusted_Connection=True;MultipleActiveResultSets=true;"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning"
+    }
+  },
+  "Tokens": {
+    "Key": "Hello there! dfd dgdfgf gfdf !retregfgfdgg",
+    "Issuer": "localhost",
+    "Audience": "localhost"
+  }
+}
