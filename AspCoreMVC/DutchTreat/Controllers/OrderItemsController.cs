@@ -9,7 +9,6 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace DutchTreat.Controllers
 {
@@ -30,14 +29,15 @@ namespace DutchTreat.Controllers
             _logger = logger;
             _mapper = mapper;
         }
+
         public IActionResult Get(int orderId)
         {
             try
             {
                 string username = User.Identity.Name;
 
-                var order = _repository.GetOrderById(username,orderId);
-                if(order!=null)
+                var order = _repository.GetOrderById(username, orderId);
+                if (order != null)
                 {
                     return Ok(_mapper.Map<IEnumerable<OrderItem>, IEnumerable<OrderItemViewModel>>(order.Items));
                 }
@@ -45,19 +45,19 @@ namespace DutchTreat.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Failed to get order items {0}",ex);
-               
+                _logger.LogError($"Failed to get order items {0}", ex);
             }
             return BadRequest("Failed to get order items");
         }
+
         [HttpGet("{id}")]
-        public IActionResult Get(int orderId,int id)
+        public IActionResult Get(int orderId, int id)
         {
             try
             {
                 string username = User.Identity.Name;
-                var order = _repository.GetOrderById(username,orderId);
-                if (order != null && order.Items!=null && order.Items.FirstOrDefault(el=>el.Id==id)!=null)
+                var order = _repository.GetOrderById(username, orderId);
+                if (order != null && order.Items != null && order.Items.FirstOrDefault(el => el.Id == id) != null)
                 {
                     return Ok(_mapper.Map<OrderItem, OrderItemViewModel>(order.Items.FirstOrDefault(el => el.Id == id)));
                 }
@@ -66,7 +66,6 @@ namespace DutchTreat.Controllers
             catch (Exception ex)
             {
                 _logger.LogError($"Failed to get order item {0}", ex);
-
             }
             return BadRequest("Failed to get order item");
         }

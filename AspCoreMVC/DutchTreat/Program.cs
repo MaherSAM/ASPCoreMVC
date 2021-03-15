@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore;
+﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace DutchTreat
@@ -17,9 +11,7 @@ namespace DutchTreat
         {
             var host = BuildWebHost(args);
 
-
             RunSeeding(host);
-
 
             host.Run();
         }
@@ -27,12 +19,11 @@ namespace DutchTreat
         private static void RunSeeding(IWebHost host)
         {
             var scopeFactory = host.Services.GetService<IServiceScopeFactory>();
-            using(var scope = scopeFactory.CreateScope())
+            using (var scope = scopeFactory.CreateScope())
             {
                 var seeder = scope.ServiceProvider.GetService<DutchTreat.Data.DutchSeeder>();
                 seeder.SeedAsync().Wait();
             }
-           
         }
 
         public static IWebHost BuildWebHost(string[] args) =>
